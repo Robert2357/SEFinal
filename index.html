@@ -11,7 +11,7 @@
     <!--PyScript link Connects our python to our html
         <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
         <script defer src="https://pyscript.net/alpha/pyscript.js"></script>-->
-
+        <script type="mpy" src="scripts.py"></script>
     <!--bootstrap link --- Used instead of CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
@@ -46,7 +46,7 @@
             </div>
             <div>
                 <!--The button-->
-                <input class="col-md-2 p-2" type="submit" id="Result_Button" name="resultButton" value="Submit">
+                <input class="col-md-2 p-2" type="submit" id="Result_Button" name="resultButton" value="Submit" onclick="returnSum">
             </div>
             <div class="p-2 bg-secondary">
                 <!--The result-->
@@ -58,7 +58,13 @@
     <footer>
 
     </footer>
-    <py-script></py-script>
+    <py-script>
+        input_text1 = Element("First_Input")
+        input_text2 = Element("Second_Input")
+        input_text3 = Element("Third_Input")
+        inputSum = input_text1 + input_text2 + input_text3
+        print(inputSum) 
+    </py-script>
 </body>
 
 </html>
